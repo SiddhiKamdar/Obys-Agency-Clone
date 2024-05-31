@@ -100,17 +100,27 @@ body{
     overflow: hidden;
     display: flex;
     align-items: center;
-    position: relative;
     z-index: 999;
 }
 .hero:nth-child(2){
     margin-top: 18vh;
 }
-.hero h1{
+.hero h1 {
     font-size: 7.2vw;
+    font-weight: 600;
     text-transform: uppercase;
     line-height: 7.2vw;
-    font-weight: 600;
+    position: relative;
+}
+
+#hero1::before {
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: 20%;
+    top: 31%;
 }
 .hero h2{
     font-size: 7.2vw;
@@ -133,6 +143,7 @@ body{
     width: 100%;
     padding-top: 17vh;
     position: relative;
+    /* margin-top: -15vh; */
 }
 #video-container{
     height:  65vh;
@@ -188,7 +199,16 @@ body{
 #page4-content h1{
     font-size: 6vw;
     text-transform: uppercase;
-
+    position: relative;
+}
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 8%;
 }
 #page4-content .underline{
     height: 1px;
@@ -239,6 +259,98 @@ body{
     min-height: 100vh;
     width: 100%;
     padding: 5vw 0;
+    position: relative;
+}
+.elem, .elem2{
+    white-space: nowrap;
+    line-height: 5vw;
+}
+.elem h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    color: transparent;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 1vw;
+    animation-name: text-anime;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.elem2 h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    color: transparent;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 1vw;
+    transform: translateX(calc(-100% - 20px));
+    animation-name: text-anime;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+.elem span, .elem2 span{
+    font-style: italic;
+    font-family: silk serif ;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+#footer{
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    padding-left: 28vw;
+    padding-right: 2vw;
+}
+#footer h1{
+    font-size: 7vw;
+    width: 60vw;
+    text-transform: uppercase;
+    position: relative;
+}
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 8%;
+}
+.underline{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    margin: 2vw 0;
+}
+#footer-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 15vw;
+    padding-top: 1.7vw;
+    padding-bottom: 1.7vw;
+}
+#footer-div h6{
+    font-size: 1vw;
+    font-weight: 500;
+    margin-bottom: 4vh ;
+}
+#footer-div h5{
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin: 0.2vh 0;
+}
+.box{
+    width: 20%;
+}
+#footer>h5{
+    font-weight: 500;
+    font-size: 1vw;
 }
 @keyframes anime {
     0%{
@@ -268,5 +380,13 @@ body{
         font-weight: 500;
         color: transparent;
         opacity: 0;
+    }
+}
+@keyframes text-anime {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
     }
 }
